@@ -1,0 +1,11 @@
+# Standard settings for DNS - using OpenDNS
+config_dns_primaryServer     : 208.67.220.220
+config_dns_secondaryServer   : 208.67.222.222
+config_dns_tertiaryServer    : null
+config_dns_auto              : False
+config_dns_autoFromInterface : null
+config_dns_searchDomains     : "ibm.com"
+
+# Standard settings for NTP - timezone set to Eastern Time
+config_ntp_ntp_servers: "time.nist.gov"
+config_ntp_timeZone: "America/New_York"

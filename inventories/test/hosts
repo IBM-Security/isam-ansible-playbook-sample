@@ -1,0 +1,16 @@
+[boulder-primary]
+192.168.198.144
+
+[boulder-restricted]
+192.168.198.145
+192.168.198.153
+
+[boulder:children]
+boulder-primary
+boulder-restricted
+
+[primary:children]
+boulder-primary
+
+[restricted:children]
+boulder-restricted

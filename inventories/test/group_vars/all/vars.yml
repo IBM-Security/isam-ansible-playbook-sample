@@ -1,0 +1,25 @@
+# Set the Python interpreter path to use
+ansible_python_interpreter: /home/python/python2.7.13/bin/python
+
+# Use local connection for making all calls
+connection: local
+ansible_connection: local
+
+# Default LMI port for appliances
+lmi_port: 443
+
+# Logging set to maximum, output will not show until -vvv flag is used
+log_level: DEBUG
+
+# Idempotent functions are the default - no need to force any calls
+force: False
+
+# Default username to use for all roles/tasks (password inside host_vars)
+username: "admin@local"
+
+# Time to wait in seconds if appliance is being rebooted
+start_config_wait_time: 300
+
+# ISAM Policy Server super-user
+sec_master_id: "sec_master"
+sec_master_pwd: "{{vault_sec_master_pwd}}"

@@ -1,0 +1,7 @@
+appliance_name: isam2.ibm.com
+password: "{{vault_password}}"
+
+ipv4_1_1_ip_address: 192.168.198.145
+ipv4_1_1_ip_mask: 24
+ipv4_1_2_ip_address: 172.16.119.132
+ipv4_1_2_ip_mask: 24
