@@ -17,6 +17,8 @@ ISAM Roles need to be installed and available.
 Appliances need to have an ip address defined for their LMI. This may mean that appliances have had their initial setup 
 done with license acceptance.
 
+If you have a Docker environment you may also download the isam-ansible docker image which takes care of all the pre-requisites, details please refer to  https://hub.docker.com/r/mludocker/isam-ansible/ .
+
 ## Get Started
 Clone this repository to get started, like so:
 `git clone https://github.com/ibm-security/isam-ansible-playbook-sample.git`
