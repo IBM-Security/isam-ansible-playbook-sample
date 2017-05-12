@@ -7,6 +7,12 @@
   roles:
     - role: start_config
       tags: ["start"]
+    - role: first_steps
+      tags: ["first", "steps"]
+      first_steps_fips: False
+      first_steps_admin_pwd: False
+    - role: sanity_checks
+      tags: ["sanity"]
     - role: add_network_ipv4
       tags: ["ipv4"]
       add_network_ipv4_label                : "1.1"
@@ -35,6 +41,21 @@
       tags: ["dns"]
     - role: config_ntp
       tags: ["ntp"]
+    - role: set_host_records
+      tags: ["host", "records"]
+      set_host_records:
+      - addr: "192.168.198.144"
+        hostnames:
+        - {name: "isam1.ibm.com"}
+        - {name: "isam1"}
+      - addr: "192.168.198.145"
+        hostnames:
+        - {name: "isam2.ibm.com"}
+        - {name: "isam2"}
+      - addr: "192.168.198.153"
+        hostnames:
+        - {name: "isam3.ibm.com"}
+        - {name: "isam3"}
     - role: config_snmp_monitoring
       tags: ["snmp"]
       config_snmp_monitoring_community: "ibm"
@@ -42,7 +63,7 @@
     - role: activate_module
       tags: ["activate", "wga"]
       activate_module_id  : "wga"
-      activate_module_code: "{{ lookup('file', '/home/python/ISAM_90_ACTIVATION_CODE_MP_ML.txt') }}"
+      activate_module_code: "{{ lookup('file', '/Users/ram/Documents/Work/Software/ISAM_90_ACTIVATION_CODE_MP_ML.txt') }}"
 
 - name: Setup Primary Appliance
   hosts: primary
@@ -59,7 +80,7 @@
     - role: set_runtime_replication
       tags: ["runtime", "replication"]
     - role: export_cluster_sign
-      export_cluster_sign_filename: "/home/python/primary.sign"
+      export_cluster_sign_filename: "/Users/ram/Documents/Work/TechAcademy/primary.sign"
 
 - name: Setup Restricted Appliances
   hosts: restricted
@@ -69,7 +90,7 @@
   roles:
     - role: add_cluster_node
       tags: ["cluster", "add"]
-      add_cluster_node_signature_file: "/home/python/primary.sign"
+      add_cluster_node_signature_file: "/Users/ram/Documents/Work/TechAcademy/primary.sign"
       add_cluster_node_restricted:     True
     - role: set_tcpip_tuning
       tags: ["tcpip"]
