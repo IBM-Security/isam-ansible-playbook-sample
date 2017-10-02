@@ -1,0 +1,11 @@
+---
+# Running first steps if necessary
+#     accept service agreements
+#     set up LMI FIPS (may restart appliance)
+#     change password
+#     commit and restart LMI
+- hosts: all
+  connection: local
+  roles:
+    - role: first_steps
+      tags: first_steps
