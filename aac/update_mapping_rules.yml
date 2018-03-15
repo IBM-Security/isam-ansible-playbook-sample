@@ -1,0 +1,14 @@
+---
+# Upload
+#   upload mapping rules
+#   Example:
+#      mapping_rules:
+#       -   name: mapping_rule_1
+#           file: "uploads/mapping_rules/<file-name>.js"
+#           category:   InfoMap
+- hosts: "{{ hosts | default('all')}}"
+  connection: local
+  roles:
+    - role: aac/update_mapping_rules
+      tags: update_mapping_rules
+      

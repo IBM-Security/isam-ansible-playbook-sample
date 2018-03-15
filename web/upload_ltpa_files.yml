@@ -1,0 +1,11 @@
+---
+# upload
+#   upload ltpa files
+#   Example:
+#     jmt_files
+#       - file: uploads/ltpa/default.ltpa
+- hosts: "{{ hosts | default('all')}}"
+  connection: local
+  roles:
+    - role: web/upload_ltpa_files
+      tags: upload_ltpa_files

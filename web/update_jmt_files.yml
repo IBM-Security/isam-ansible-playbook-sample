@@ -1,0 +1,11 @@
+---
+# update
+#   update jmt files
+#   Example:
+#     jmt_files
+#       - file: uploads/jmt/jmt.conf
+- hosts: "{{ hosts | default('all')}}"
+  connection: local
+  roles:
+    - role: web/update_jmt_files
+      tags: update_jmt_files

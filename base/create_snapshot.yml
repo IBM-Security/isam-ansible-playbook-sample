@@ -1,0 +1,9 @@
+---
+# Create
+#   create snapshot
+- hosts: "{{ hosts | default('all')}}"
+  connection: local
+  roles:
+    - role: base/create_snapshot
+      tags: snapshot
+      

@@ -1,0 +1,11 @@
+---
+# Task
+#   description
+#   Example:
+#      iterator:
+- hosts: "{{ hosts | default('all')}}"
+  connection: local
+  roles:
+    - role: base/playbook
+      tags: playbook
+      

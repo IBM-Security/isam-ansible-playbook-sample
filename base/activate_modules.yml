@@ -1,0 +1,13 @@
+---
+# Add
+#   add interfaces by following inventory structure:
+#   Example:
+#      activation_keys:
+#        - id: wga
+#          code: "AAAA-BBBB-CCCC-DDDD-EEEE"
+- hosts: "{{ hosts | default('all')}}"
+  connection: local
+  roles:
+    - role: base/activate_modules
+      tags: activate_modules
+      

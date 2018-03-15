@@ -1,0 +1,19 @@
+---
+# configure
+#   configure sts chain templates:
+#   Example: STSUU to LTPA Token
+#     sts_chain_templates:
+#       - name: STSUU_TO_LTPA_TEMPLATE
+#         description: STSUU_TO_LTPA_TEMPLATE
+#         chainItems:
+#           - id: default-stsuu
+#             mode: validate
+#           - id: default-map
+#             mode: map
+#           - id: default-ltpa
+#             mode: issue
+- hosts: "{{ hosts | default('all')}}"
+  connection: local
+  roles:
+    - role: fed/configure_sts_chains
+      tags: configure_sts_chains
