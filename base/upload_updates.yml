@@ -1,0 +1,12 @@
+---
+# Add
+#   add interfaces by following inventory structure:
+#   Example:
+#      updates:
+#        - file: uploads/updates/90x.pkg
+- hosts: "{{ hosts | default('all')}}"
+  connection: local
+  roles:
+    - role: base/upload_updates
+      tags: upload_updates
+      
