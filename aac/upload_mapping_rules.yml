@@ -8,6 +8,7 @@
 #           category:   InfoMap
 - hosts: "{{ hosts | default('all')}}"
   connection: local
+  gather_facts: no
   roles:
     - role: aac/upload_mapping_rules
       tags: upload_mapping_rules

@@ -14,6 +14,7 @@
 #             value: MappingRule1
 - hosts: "{{ hosts | default('all')}}"
   connection: local
+  gather_facts: no
   roles:
     - role: aac/create_authentication_mechanisms
       tags: create_authentication_mechanisms

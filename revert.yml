@@ -6,6 +6,7 @@
 - name: Revert Appliances to Pre-Configuration State
   hosts: all
   connection: local
+  gather_facts: no
   roles:
     - role: delete_activation
       tags: ["delete", "activation", "federation"]

@@ -4,6 +4,7 @@
 - name: Apply Common Configuration to all Appliances
   hosts: all
   connection: local
+  gather_facts: no
   roles:
     - role: start_config
       tags: ["start"]
@@ -68,6 +69,7 @@
 - name: Setup Primary Appliance
   hosts: primary
   connection: local
+  gather_facts: no
   roles:
     - role: config_policyserver
       tags: ["policyserver", "config"]
@@ -85,6 +87,7 @@
 - name: Setup Restricted Appliances
   hosts: restricted
   connection: local
+  gather_facts: no
   vars:
     reverseproxy_instance_name: "default"
   roles:
@@ -105,6 +108,7 @@
 - name: Setup Primary Appliance
   hosts: primary
   connection: local
+  gather_facts: no
   roles:
     - role: execute_pdadmin
       tags: ["pdadmin", "object", "create"]
@@ -116,6 +120,7 @@
 - name: Setup Restricted Appliances
   hosts: restricted
   connection: local
+  gather_facts: no
   vars:
     reverseproxy_instance_name: "default"
   roles:

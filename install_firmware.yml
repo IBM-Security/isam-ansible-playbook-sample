@@ -9,6 +9,7 @@
 - name: Upgrade all Appliances to a given Firmware Level
   hosts: all
   connection: local
+  gather_facts: no
   roles:
     - start_config
 

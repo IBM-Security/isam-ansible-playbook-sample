@@ -18,6 +18,7 @@
 #               definitionName: oauth-provider
 - hosts: "{{ hosts | default('all')}}"
   connection: local
+  gather_facts: no
   roles:
     - role: aac/create_api_protection_clients
       tags: create_api_protection_clients

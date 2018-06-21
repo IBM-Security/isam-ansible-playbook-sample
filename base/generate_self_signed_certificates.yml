@@ -10,6 +10,7 @@
 ---
 - hosts: "{{ hosts | default('all')}}"
   connection: local
+  gather_facts: no
   roles:
     - role: base/generate_self_signed_certificates
       tags: generate_self_signed_certificates

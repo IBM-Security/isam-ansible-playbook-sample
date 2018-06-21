@@ -16,6 +16,7 @@
 # Attention: commented out or missing addresses will be deleted by this role
 - hosts: "{{ hosts | default('all')}}"
   connection: local
+  gather_facts: no
   roles:
     - role: base/delete_interfaces
       tags: delete_interfaces

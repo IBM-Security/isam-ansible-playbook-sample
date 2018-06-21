@@ -14,6 +14,7 @@
 #           description: Demo Connection to LDAP
 - hosts: "{{ hosts | default('all')}}"
   connection: local
+  gather_facts: no
   roles:
     - role: aac/configure_server_connections
       tags: configure_server_connections

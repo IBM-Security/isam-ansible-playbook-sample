@@ -24,6 +24,7 @@
 #                   - openid
 - hosts: "{{ hosts | default('all')}}"
   connection: local
+  gather_facts: no
   roles:
     - role: fed/create_federation_partners
       tags: create_federation_partners

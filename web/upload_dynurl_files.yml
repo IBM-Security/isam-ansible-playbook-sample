@@ -6,6 +6,7 @@
 #       - file: uploads/dynurl/dynurl.conf
 - hosts: "{{ hosts | default('all')}}"
   connection: local
+  gather_facts: no
   roles:
     - role: web/upload_dynurl_files
       tags: upload_dynurl_files

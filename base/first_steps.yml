@@ -6,6 +6,7 @@
 #     commit and restart LMI
 - hosts: "{{ hosts | default('all')}}"
   connection: local
+  gather_facts: no
   roles:
     - role: base/first_steps
       tags: first_steps

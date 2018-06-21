@@ -8,6 +8,7 @@
 #          secure: 'yes'
 - hosts: "{{ hosts | default('all')}}"
   connection: local
+  gather_facts: no
   roles:
     - role: base/set_listening_interfaces
       tags: set_listening_interfaces

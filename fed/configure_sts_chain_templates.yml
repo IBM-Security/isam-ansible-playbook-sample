@@ -14,6 +14,7 @@
 #             mode: issue
 - hosts: "{{ hosts | default('all')}}"
   connection: local
+  gather_facts: no
   roles:
     - role: fed/configure_sts_chain_templates
       tags: configure_sts_chain_templates

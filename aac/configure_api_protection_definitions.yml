@@ -11,6 +11,7 @@
 #           tcmBehavior: NEVER_PROMPT
 - hosts: "{{ hosts | default('all')}}"
   connection: local
+  gather_facts: no
   roles:
     - role: aac/configure_api_protection_definitions
       tags: configure_api_protection_definitions

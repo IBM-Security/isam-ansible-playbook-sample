@@ -6,6 +6,7 @@
 #       - file: uploads/jmt/jmt.conf
 - hosts: "{{ hosts | default('all')}}"
   connection: local
+  gather_facts: no
   roles:
     - role: web/upload_jmt_files
       tags: upload_jmt_files
