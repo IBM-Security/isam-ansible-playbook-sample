@@ -17,6 +17,7 @@
 #          ip_address:         "{{ interfaces[0].addresses[1].address }}"
 - hosts: "{{ hosts | default('all')}}"
   connection: local
+  gather_facts: no
   roles:
     - role: web/create_reverseproxy_instances
       tags: create_reverseproxy_instances

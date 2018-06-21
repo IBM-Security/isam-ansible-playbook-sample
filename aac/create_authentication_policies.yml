@@ -10,6 +10,7 @@
 #         enabled:        "True"
 - hosts: "{{ hosts | default('all')}}"
   connection: local
+  gather_facts: no
   roles:
     - role: aac/create_authentication_policies
       tags: create_authentication_policies

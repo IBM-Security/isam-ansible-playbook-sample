@@ -26,6 +26,7 @@
 #               identityMappingRuleReference: "5"
 - hosts: "{{ hosts | default('all')}}"
   connection: local
+  gather_facts: no
   roles:
     - role: fed/create_federations
       tags: create_federations
