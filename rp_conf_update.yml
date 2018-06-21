@@ -4,6 +4,7 @@
 - name: Update RP Entry
   hosts: all
   connection: local
+  gather_facts: no
   roles:
     - role: start_config
 

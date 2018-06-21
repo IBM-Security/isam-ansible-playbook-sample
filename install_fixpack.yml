@@ -6,6 +6,7 @@
 - name: Apply given Fixpack to all Appliances
   hosts: all
   connection: local
+  gather_facts: no
   roles:
     - start_config
 

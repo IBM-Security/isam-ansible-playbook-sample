@@ -4,6 +4,7 @@
 - name: Compare all aspects of appliance(s) with given Master
   hosts: all
   connection: local
+  gather_facts: no
   vars:
     master_lmi_port: 443
     master_username: "admin@local"

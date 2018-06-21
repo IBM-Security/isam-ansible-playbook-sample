@@ -3,6 +3,7 @@
 - name: Restart Reverse Proxy
   hosts: all
   connection: local
+  gather_facts: no
   roles:
     - role: start_config
 
