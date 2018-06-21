@@ -1,7 +1,7 @@
 # playbook for creating certificate databases
 # Example inventory:
 #  create_certificate_databases:
-#      kdb_id: "{{ item.kdb_id }}"
+#      kdb_name: "{{ item.kdb_id }}"
 ---
 - hosts: "{{ hosts | default('all')}}"
   connection: local
