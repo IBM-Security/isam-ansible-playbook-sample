@@ -4,7 +4,6 @@
   hosts: all
   no_log: True
   connection: local
-  gather_facts: no
   vars:
     log_level: "CRITICAL"
   roles:
