@@ -12,4 +12,3 @@
   roles:
     - role: aac/configure_mapping_rules
       tags: configure_mapping_rules
-      

@@ -2,7 +2,7 @@
 # Upload
 #   upload signer certificates into certificate database
 #   Example:
-#      upload_signer_certificates:
+#      signer_certificates:
 #         -   kdb_id: "{{ item.kdb_id }}"
 #             cert: "{{ inventory_dir }}/{{ item.cert  }}"
 #             label: "{{ item.label }}"
