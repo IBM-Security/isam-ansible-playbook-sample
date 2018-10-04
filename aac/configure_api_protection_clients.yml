@@ -12,10 +12,8 @@
 #           clients: 
 #             - name: TestApp
 #               companyName: IBM demo client for OAuth flows
-#               redirectUri: 
-#                 - https://localhost
-#               contractType: ADMINISTRATIVE
-#               definitionName: oauth-provider
+#               redirectUri: https://localhost
+#               contactType: ADMINISTRATIVE
 - hosts: "{{ hosts | default('all')}}"
   connection: local
   gather_facts: no
