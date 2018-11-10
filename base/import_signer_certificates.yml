@@ -10,5 +10,5 @@
   connection: local
   gather_facts: no
   roles:
-    - role: base/upload_signer_certificates
-      tags: upload_signer_certificates
+    - role: base/import_signer_certificates
+      tags: import_signer_certificates

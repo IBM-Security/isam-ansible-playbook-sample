@@ -10,5 +10,5 @@
   connection: local
   gather_facts: no
   roles:
-    - role: base/import_personal_certs
-      tags: personal certificates
+    - role: base/import_personal_certificates
+      tags: import_personal_certificates
