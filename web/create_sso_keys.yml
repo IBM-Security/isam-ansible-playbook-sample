@@ -4,7 +4,6 @@
 - hosts: "{{ hosts | default('all')}}"
   connection: local
   gather_facts: no
-  gather_facts: False
   roles:
-    - role: create_sso_keys
+    - role: web/create_sso_keys
       tags: create_sso_keys
