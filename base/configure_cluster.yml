@@ -13,6 +13,7 @@
 #     hvdb_db_secure: false
 - hosts: "{{ hosts | default('all')}}"
   connection: local
+  gather_facts: no
   roles:
     - role: base/configure_cluster
       tags: configure_cluster
