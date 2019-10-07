@@ -3,7 +3,7 @@
 - name: Create Report on Firmware and Fixpacks
   hosts: all
   connection: local
-  gather_facts: no
+  gather_facts: yes
   roles:
     - role: start_config
 
