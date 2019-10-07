@@ -1,10 +1,9 @@
 ---
-# Create
-#   configure dns servers
+# Configure
+#   configure scim
 - hosts: "{{ hosts | default('all')}}"
   connection: local
   gather_facts: no
   roles:
-    - role: config_dns
-      tags: dns
-      
+    - role: aac/configure_scim
+      tags: configure_scim
